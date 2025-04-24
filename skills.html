@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><span>YMR</span></div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <i class="fas fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+    </nav>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+       
+
+        <!-- Languages -->
+        <div class="skill-group">
+            <h3>Languages</h3>
+            <div class="skill-icons">
+                <div class="skill-card"><img src="images/html5.jpeg" alt="HTML5"><span>HTML5</span></div>
+                <div class="skill-card"><img src="images/css3.jpeg" alt="CSS3"><span>CSS3</span></div>
+                <div class="skill-card"><img src="images/js.jpeg" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="skill-card"><img src="images/cpp.jpeg" alt="C++"><span>C++</span></div>
+                <div class="skill-card"><img src="images/java.jpeg" alt="Java"><span>Java</span></div>
+                <div class="skill-card"><img src="images/php.jpeg" alt="PHP"><span>PHP</span></div>
+                <div class="skill-card"><img src="images/c.jpeg" alt="C"><span>C</span></div>
+            </div>
+        </div>
+
+        <!-- Frameworks & Libraries -->
+        <div class="skill-group">
+            <h3>Frameworks & Libraries</h3>
+            <div class="skill-icons">
+                <div class="skill-card"><img src="images/bootstrap.jpeg" alt="Bootstrap"><span>Bootstrap</span></div>
+                <div class="skill-card"><img src="images/nodejs.jpeg" alt="Node.js"><span>Node.js</span></div>
+                <div class="skill-card"><img src="images/expressjs.jpeg" alt="Node.js"><span>Express js</span></div>
+                <div class="skill-card"><img src="images/reactjs.jpeg" alt="React.js"><span>React.js</span></div>
+                <div class="skill-card"><img src="images/github.jpeg" alt="GitHub"><span>GitHub</span></div>
+            </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-group">
+            <h3>Tools & Platforms</h3>
+            <div class="skill-icons">
+                <div class="skill-card"><img src="images/vscode.jpeg" alt="VS Code"><span>VS Code</span></div>
+                <div class="skill-card"><img src="images/mysql.jpeg" alt="MySQL"><span>MySQL</span></div>
+                <div class="skill-card"><img src="images/mongodb.jpeg" alt="MongoDB"><span>MongoDB</span></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function hamburg() {
+            const links = document.querySelector('.links');
+            links.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

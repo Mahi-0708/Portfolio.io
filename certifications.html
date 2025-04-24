@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certifications | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo"><span>YMR</span></div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="certifications.html" class="active">Certifications</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="certification-section">
+    <h2>Certifications</h2>
+
+    <!-- Certificate 1 -->
+    <div class="certificate-row">
+      <div class="cert-image">
+        <img src="images/front.jpg" alt="Frontend Certificate">
+        <h3>Frontend Web Development</h3>
+      </div>
+      <div class="cert-info">
+        <p><strong></strong> A course focused on building interactive, responsive websites using modern front-end technologies.</p>
+        <p><strong></strong> Gained expertise in HTML5, CSS3, JavaScript, responsive layouts, DOM manipulation, and UI/UX fundamentals.</p>
+      </div>
+    </div>
+
+    <!-- Certificate 2 -->
+    <div class="certificate-row">
+      <div class="cert-image">
+        <img src="images/nptel.jpg" alt="NPTEL Certificate">
+        <h3>NPTEL Software Testing</h3>
+      </div>
+      <div class="cert-info">
+        <p><strong></strong> An IIT-taught program on software testing methodologies, offered by NPTEL.</p>
+        <p><strong></strong> Mastered test case design, logic & data-flow coverage, mutation testing, and symbolic testing techniques.</p>
+      </div>
+    </div>
+
+    <!-- Certificate 3 -->
+    <div class="certificate-row">
+      <div class="cert-image">
+        <img src="images/Screenshot 2025-04-24 112601.png" alt="DSA Certificate">
+        <h3>Data Structures & Algorithms</h3>
+      </div>
+      <div class="cert-info">
+        <p><strong></strong> A comprehensive program covering fundamental data structures and algorithms.</p>
+        <p><strong></strong> Learned arrays, linked lists, trees, graphs, sorting/searching, recursion, DP, and complexity analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="cert-modal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="modal-caption"></div>
+  </div>
+
+  <script>
+    // Open modal on image click
+    document.querySelectorAll('.cert-image img').forEach(img => {
+      img.addEventListener('click', () => {
+        const modal = document.getElementById('cert-modal');
+        const modalImg = document.getElementById('modal-img');
+        const caption = document.getElementById('modal-caption');
+        modal.style.display = 'block';
+        modalImg.src = img.src;
+        caption.textContent = img.alt;
+      });
+    });
+
+    // Close modal on '×' click
+    document.querySelector('.modal-close').addEventListener('click', () => {
+      document.getElementById('cert-modal').style.display = 'none';
+    });
+
+    // Also close modal when clicking outside the image
+    document.getElementById('cert-modal').addEventListener('click', e => {
+      if (e.target === e.currentTarget) {
+        e.currentTarget.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

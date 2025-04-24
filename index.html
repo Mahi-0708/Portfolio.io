@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ✅ Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Smooth scroll and sticky nav -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><span>YMR</span></div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <i class="fas fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+    </nav>
+
+    <div class="dropdown">
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+            <i class="fas fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+    </div>
+
+    <!-- HOME SECTION -->
+    <section>
+        <div class="main-container">
+            <div class="content">
+                <h1>Hello, I'm <span>Mahesh Reddy</span></h1>
+                <div class="typewriter">
+                    I'm a <span class="typewriter-text"></span>
+                </div>
+                <p>Passionate about creating impactful solutions through coding and design.</p>
+                <p>I'm a Full Stack Developer with expertise in both frontend and backend technologies.</p>
+                <p>Focused on delivering efficient, scalable, and user-friendly applications.</p>
+                <div class="social-links">
+                    <a href="https://github.com/mahi-0708" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mahesh-reddy-563b9b252" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
